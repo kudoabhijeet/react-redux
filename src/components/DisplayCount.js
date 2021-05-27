@@ -1,8 +1,10 @@
 import React from "react";
+import {useSelector} from 'react-redux';
 
 const DisplayCount = () => {
-
+    const counter = useSelector(state => state.counter)
     const createCard = () => {
+        
         return(
             <div
                 style={{
@@ -16,7 +18,7 @@ const DisplayCount = () => {
                     alignItems: 'center'
                 }}
             >
-                <p style={{fontFamily:'Times New Roman, Times, serif', fontSize:'100px'}}>1</p>
+                <p style={{fontFamily:'Times New Roman, Times, serif', fontSize:'100px'}}>{counter}</p>
             </div>
         )
     }
